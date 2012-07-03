@@ -1,5 +1,6 @@
-package org.geotools.process.geometry.gs;
+package org.LMNSolutions.WPS;
 
+import org.geotools.coverage.grid.GridCoverage2D;
 import org.geoserver.wps.gs.GeoServerProcess;
 import org.geoserver.wps.jts.DescribeParameter;
 import org.geoserver.wps.jts.DescribeProcess;
@@ -13,13 +14,13 @@ public class HelicopterReachability implements GeoServerProcess {
 
     @DescribeResult(name = "result", description = "The collection of result polygons")
     public Geometry execute(
-            @DescribeParameter(name = "raster", description = "The raster to check against.") Geometry poly)
+            @DescribeParameter(name = "raster", description = "The raster to check against.") GridCoverage2D _raster)
             throws Exception {
-    	return calculateArea(poly);
+    	return calculateArea(_raster);
     }
     
-    public static Geometry calculateArea(Geometry poly) 
+    public static Geometry calculateArea(GridCoverage2D _raster) 
 	{
-    	return poly;
+    	return null;
 	}
 }
