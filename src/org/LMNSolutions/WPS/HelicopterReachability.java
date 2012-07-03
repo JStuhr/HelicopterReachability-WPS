@@ -5,6 +5,7 @@ import org.geoserver.wps.gs.GeoServerProcess;
 import org.geoserver.wps.jts.DescribeParameter;
 import org.geoserver.wps.jts.DescribeProcess;
 import org.geoserver.wps.jts.DescribeResult;
+import org.joda.time.Duration;
 
 import com.vividsolutions.jts.geom.Geometry;
 
@@ -23,4 +24,9 @@ public class HelicopterReachability implements GeoServerProcess {
 	{
     	return null;
 	}
+    
+    private static Geometry calculateImpassableAreas(Duration time, double elevation_m)
+    {
+    	return null;
+    }
 }
