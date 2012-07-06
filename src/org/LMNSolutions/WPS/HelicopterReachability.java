@@ -15,12 +15,12 @@ public class HelicopterReachability implements GeoServerProcess {
 
     @DescribeResult(name = "result", description = "The collection of result polygons")
     public Geometry execute(
-            @DescribeParameter(name = "raster", description = "The raster to check against.") GridCoverage2D _raster)
+            @DescribeParameter(name = "raster", description = "The raster to check against.") GridCoverage2D _coverage)
             throws Exception {
-    	return calculateArea(_raster);
+    	return calculateArea(_coverage);
     }
     
-    public static Geometry calculateArea(GridCoverage2D _raster) 
+    public static Geometry calculateArea(GridCoverage2D _coverage) 
 	{
     	return null;
 	}
